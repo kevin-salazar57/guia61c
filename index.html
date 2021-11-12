@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejemplo web api</title>
+	<meta charset="utf-8"  />
+	<meta name="Autor" content=""/>
+<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
+<script src="codigo.js"></script>
+
+</head>
+
+<body >
+	<div class="header">
+ 		<h1>Guia 61c web api</h1>
+     	<p>DATOS PERSONALES</p>
+	</div>
+	<div class="margen1">
+		<form>
+			<label for="fname">Titulo:</label><br>
+  			<input type="text" id="txtTitulo" name="titulo"><br>
+  			<label for="lname">Precio:</label><br>
+ 			<input type="text" id="txtPrecio" name="precio"><br>
+			<label for="lname">Descripción:</label><br>
+ 			<input type="text" id="txtDescripcion" name="descripcion"><br>
+			<label for="lname">Imagen:</label><br>
+ 			<input type="text" id="txtImagen" name="imagen"><br>
+			<label for="lname">Categoría</label><br>
+ 			<input type="text" id="txtCategoria" name="categoria"><br>
+						
+		</form><button class="boton" onclick="agregarProducto()">Guardar</button>  
+	</div>
+	<div class="margen2">
+	 	<p><button class="boton" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button></p>
+	</div>
+	 <div id="listado" style="display:none;">
+		<div name="filtroprods" id="filtroprods">
+			<h2>Seleccione Categorias</h2> 
+			
+				<input type="checkbox" id="c1" value="c1" checked><label>Electronicos</label>
+				<input type="checkbox" id="c2" value="c2" checked><label>Joyería</label>
+				<input type="checkbox" id="c3" value="c3" checked><label>Ropa Caballero</label>
+				<input type="checkbox" id="c4" value="c4" checked><label>Ropa Dama</label>
+				<ul>
+					<li>Click en la imagen para Acercamiento</li>
+					<li>Click en precio para ordenar Asc o Desc</li>
+				</ul>			
+			<table id="tabla" border="1">
+				<thead>
+					<tr><th>id</th><th>foto</th><th  id="price">price</th>
+					<th>title</th><th>description</th><th>category</th><th>Acción</th></tr>
+				</thead>
+				<tbody id="tbody"></tbody>
+			</table>
+		</div>
+	 </div>
+	
+     
+</body>
+</html>
